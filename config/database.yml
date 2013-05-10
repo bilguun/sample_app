@@ -12,7 +12,7 @@ development:
   username: saasbook
   password: saasbook
 
-test:
+test: &test
   adapter: postgresql
   encoding: unicode
   database: appname_test
@@ -29,3 +29,6 @@ production:
   timeout: 5000
   username: saasbook
   password: saasbook
+
+cucumber:
+  <<: *test
